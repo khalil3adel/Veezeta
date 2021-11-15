@@ -1,0 +1,179 @@
+﻿@model Vezeeta.Models.LoginDoctorViewModel
+@{
+    ViewBag.Title = "Logindoctor";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login to your account | Vezeeta</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="~/Content/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/Content/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/Content/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+    <link href="~/Content/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/css/font-awesome.css" rel="stylesheet" />
+    <link rel="icon" href="~/Content/images/logohead.jfif" />
+
+    <link href="~/Content/css/style.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-image: url('https://cdn.vezeeta.com/account-mgmt-web/1-22-7/assets/background.png');
+        }
+
+        h5 {
+            color: rgb(105, 105, 105);
+            margin-top: 40px;
+        }
+
+        .field-validation-error {
+            color: #ff0000;
+        }
+
+        .field-validation-valid {
+            display: none;
+        }
+
+        .input-validation-error {
+            border: 1px solid #ff0000 !important;
+            background-color: #ffeeee !important;
+        }
+
+        .validation-summary-errors {
+            font-weight: bold !important;
+            color: #ff0000 !important;
+        }
+
+        .validation-summary-valid {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    @{
+        Html.RenderPartial("_NaveBar");
+    }
+    <!-- End Header -->
+
+    <br /><br /><br /><br />
+
+    <div class="container" style="width: 80%; height: 670px; background-color: white;">
+        <div class="row">
+            <div class="col-md-12  col-sm-12 col-12">
+                <h5 class="pl-md-5">Welcome Back!</h5>
+            </div>
+        </div><!-- end of first row -->
+        <div class="row">
+            <div class="col-md-12  col-sm-12 col-12">
+                <p class="pl-md-5" style="font-size: 13px; color: gray;margin-top: 20px;margin-bottom: 40px;">You can login with Facebook and Google or use your email</p>
+            </div>
+        </div><!-- end of second row -->
+        <div class="row  justify-content-center align-self-center">
+            <div class="col-md-3  col-sm-12 col-12">
+                <div class="input-group mt-2 ml-sm-5">
+                    <a href="#" class="fb btn btn-block" style="background-color: #3B5998; color: white; width: 400px;">
+                        <i class="fa fa-facebook fa-fw"></i> Connect  with Facebook
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-3  col-sm-12 col-12">
+                <div class="input-group mt-2 ml-sm-5">
+                    <a href="#" class="fb btn btn-block" style="background-color:rgb(201, 60, 35); color: white; width: 400px;">
+                        <i class="fa fa-google fa-fw"></i>  Connect  with Google
+                    </a>
+                </div>
+            </div>
+        </div><!-- end of thrid row -->
+
+        <div style="display: flex; justify-content: center; margin-top: 50px;">
+            <p style=" font-size: 20px; color: rgb(184, 181, 181); text-align: center; border: 2px solid rgb(184, 181, 181); border-radius: 50%; width: 40px; height: 40px;">or</p>
+        </div>
+
+        <div class="row  justify-content-center align-self-center">
+            <div class="col-md-6  col-sm-12 col-12">
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    @Html.ValidationSummary(true)
+
+                    <div class="input-group mt-2">
+                        <span class=" input-group-prepend"><i class=" fa fa-address-card input-group-text" style=" border-top: none; border-left: none; border-right: none;"></i></span>
+                        @Html.EditorFor(a => a.Email, new { htmlAttributes = new { @class = "form-control", autofocus = "", placeholder = "Email*", style = "width:300px; border-top: none; border-left: none; border-right: none;", id = "validationCustom01" } })
+                        @Html.ValidationMessageFor(a => a.Email, "", new { @class = "text-danger" })
+
+                    </div>
+
+                    <div class="input-group mt-2">
+                        <span class=" input-group-prepend"><i class=" fa fa-unlock-alt input-group-text" style=" border-top: none; border-left: none; border-right: none;"></i></span>
+                        @Html.EditorFor(a => a.PassWord, new { htmlAttributes = new { @class = "form-control", placeholder = "Password*", style = "width:300px; border-top: none; border-left: none; border-right: none;", id = "validationCustom01" } })
+                        @Html.ValidationMessageFor(a => a.PassWord, "", new { @class = "text-danger" })
+                    </div>
+
+                    <input type="submit" value="Login" class="btn btn-default btn-primary btn-block" style="margin-top: 20px; margin-left: 40%; width: 100px;" />
+
+                    <br />
+                    <span>
+                        <a href="#" style="text-decoration: underline; margin-left: 35%; font-size: 13px;">Forgot Your Password?</a>
+                    </span><br />
+
+                    <div style="text-align: center; margin-bottom: 40px;">
+                        <span>
+                            <a style="font-size: 13px; color: gray;">Don't have an account?</a>
+                        </span>
+
+                        <a href="/AllSignUpDoctor/SignUpDoctor/" style="text-decoration: underline; font-size: 13px;">Sign Up</a>
+                    </div>
+                }
+
+            </div>
+        </div><!-- end of forth row -->
+    </div> <!-- end container -->
+
+    <br />
+
+    <!-- Main JS File -->
+    <script src="~/Content/js/main.js"></script>
+    <script src="~/Content/js/JQuery-3.3.1.min.js"></script>
+    <script src="~/Content/js/popper.js"></script>
+    <script src="~/Content/js/bootstrap.js"></script>
+
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+    <script>
+
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+
+    </script>
+</body>
+</html>
+

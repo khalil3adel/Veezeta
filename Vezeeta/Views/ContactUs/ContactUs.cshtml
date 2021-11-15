@@ -1,0 +1,196 @@
+﻿
+@{
+    ViewBag.Title = "اتصل بنا";
+    //Layout = null;
+}
+
+
+    <style>
+        body {
+            background-color: #EEEDED;
+            border-radius: 5%;
+        }
+
+        h5 {
+            color: rgb(105, 105, 105);
+            margin-top: 40px;
+        }
+
+        hr.vert {
+            border: none;
+            border-left: 1px solid rgb(202, 200, 200);
+            height: 90vh;
+            width: 1px;
+        }
+        .mydiv {
+            width: 100%;
+            height: 100%;
+            background-image: url('/Content/images/cover22.jpg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-color: gray;
+        }
+
+        .header {
+            color: #36A0FF;
+            font-size: 27px;
+            margin: 50px;
+        }
+    </style>
+
+
+
+    <br />
+
+    <div class="container" style=" display: flex;justify-content: space-around;border-radius: 10px; width: 80%;  height: auto; background-color: white;">
+        <div class="row" style=" flex-direction: row-reverse;">
+            <div class="col-md-7  col-sm-12 col-12 mb-3">
+                <div class="row mt-3 text-right">
+                    <div class="col-md-12  col-sm-12 col-12">
+                        <p style="font-size: 25px; color: rgb(9, 123, 168);" class="pl-md-5">اتصل بنا</p>
+                    </div>
+                </div><!-- end of first row -->
+
+                <div class="row text-right">
+                    <div class="col-md-12  col-sm-12 col-12">
+                        <p class="pl-md-5" style="font-size: 13px; color: gray;" class="pl-md-5">.نحن سعداء لتلقي استفساراتكم واقتراحاتكم</p>
+                    </div>
+                </div><!-- end of second row -->
+
+                <form class="needs-validation" novalidate method="get" action="#">
+
+                    <div class="form-group mb-4 text-right">
+                        <label style="font-size: 15px; color: gray;"><span style="color: red;">*</span> الاسم  </label>
+                        <input type="text" class="form-control" autofocus required id="validationCustom01" />
+                        <div class="invalid-feedback">
+                            يرجى ادخال الاسم
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-group mb-4 text-right">
+                        <label style="font-size: 15px; color: gray;"><span style="color: red;">*</span> رقم الموبايل  </label>
+                        <input type="tel" class="form-control" required id="validationCustom02" />
+                        <div class="invalid-feedback">
+                            يرجى ادخال رقم الموبايل
+                        </div>
+                    </div>
+
+
+                    <div class="form-group mb-4 text-right">
+                        <label style="font-size: 15px; color: gray;"><span style="color: red;">*</span> البريد الالكتروني   </label>
+                        <input type="tel" class="form-control" required id="validationCustom03" />
+                        <div class="invalid-feedback">
+                            يرجى ادخال البريد الالكتروني
+                        </div>
+                    </div>
+
+
+                    <div class="form-group mb-4 text-right">
+                        <label style="font-size: 15px; color: gray;"><span style="color: red;">*</span>تعليقات</label>
+                        <textarea id="w3review" name="w3review" class="form-control" required rows="4" cols="35" id="validationCustom04"></textarea>
+                        <div class="invalid-feedback">
+                            يرجى ادخال تعليق
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-default btn-danger btn-block" style="margin-top: 20px; margin-left: 40%; width: 100px;">ارسال</button>
+
+                </form>
+            </div><!-- end of first  col -->
+
+            <div class="d-md-block col-md-1 d-sm-block col-sm-1 d-none">
+                <hr class="vert" />
+            </div>
+
+
+            <div class="col-md-4  col-sm-12 col-12 mb-3 ">
+                <div class="row mt-3 text-right">
+                    <div class="col-md-12  col-sm-12 col-12">
+                        <p style="font-size: 25px; color: rgb(9, 123, 168);"> اتصل بنا</p>
+                    </div>
+                </div>
+
+                <div class="row text-right">
+                    <div class="col-md-12  col-sm-12 col-12">
+                        <p style="font-size: 15px; color: gray">١٦٦٧٦ سعر مكالمة عادية</p>
+                    </div>
+                </div>
+
+                <div class="row text-right">
+                    <div class="col-md-12  col-sm-12 col-12">
+                        <p style="font-size: 15px; color: gray"> : من خارج مصر اتصل ب</p>
+                        <p style="font-size: 15px; color: gray">+2 02 259 83 999</p>
+                    </div>
+                </div>
+
+                <div class="row mt-3 text-right">
+                    <div class="col-md-12  col-sm-12 col-12">
+                        <p style="font-size: 25px; color: rgb(9, 123, 168);">العنوان</p>
+                    </div>
+                </div>
+
+                <div class="row text-right">
+                    <div class="col-md-12  col-sm-12 col-12">
+                        <p style="font-size: 13px; color: gray">١٢٤ شارع عثمان بن عفان خلف الكليه الحربيه - مصر الجديدة</p>
+                    </div>
+                </div>
+
+                <div class="row mt-3 text-right">
+                    <div class="col-md-12  col-sm-12 col-12">
+                        <p style="font-size: 25px; color: rgb(9, 123, 168);">راسلنا على</p>
+                    </div>
+                </div>
+
+                <div class="row text-right">
+                    <div class="col-md-12  col-sm-12 col-12">
+                        <a href="#" style="font-size: 13px; color: gray">customercare@vezeeta.com</a>
+                    </div>
+                </div>
+
+                <div class="row mt-3 text-right">
+                    <div class="col-md-12  col-sm-12 col-12">
+                        <p style="font-size: 25px; color: rgb(9, 123, 168);">تابعنا على</p>
+                    </div>
+                </div>
+
+                <div class="row text-right">
+                    <div class="col-md-12  col-sm-12 col-12">
+                        <a href="#" style="font-size: 13px; color: gray"><span class="mr-3 fa fa-facebook-f fa-2x text-primary"></span></a>
+                        <a href="#" style="font-size: 13px; color: gray"><span class="mr-3 fa fa-instagram fa-2x text-primary"></span></a>
+                        <a href="#" style="font-size: 13px; color: gray"><span class="fa fa-twitter fa-2x text-primary"></span></a>
+                    </div>
+                </div>
+            </div><!-- end of second col -->
+
+        </div><!-- end row -->
+    </div> <!-- end container -->
+
+    <br />
+
+   
+    <script>
+
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+
+    </script>
+</body>
+</html>
+
